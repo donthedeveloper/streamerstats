@@ -3,23 +3,35 @@
 // ini_set('display_errors', 'On');
 
 include('resources/config.php');
-include('classes/database.php');
+include('classes/Database.php');
+include('classes/DataSplit.php');
+include('classes/Calculations.php');
 
 $db = new Database($dbConfig);
+$data = new DataSplit();
 
 if ($_POST['streamer_name']) {
   $streamerName = $_POST['streamer_name'];
 }
 // remove after test
-$streamerName = 'monstercat';
+$streamerName = 'donthedeveloper';
 
 // Check if streamer exists in database
 if ($db->streamerExistsinDB($streamerName)) {
   // Check if streamer has data
- 
-    // If streamer has data, return it
-  
+  $streamerData = $db->streamerGetData($streamerName);
+  if (!$streamerData) {
     // If streamer DOES NOT have data, return error message (true if streamer was JUST entered or streamer has not been online since entered)
+  }
+  else {
+    // If streamer has data, return it
+    $data->pdoToArrays($streamerData);
+//     foreach($data->getMultipleStreamsArray() as $array) {
+//       print_r($array);
+//       echo "<br /><br />";
+//     }
+//     echo count($data->getMultipleStreamsArray());
+  }
 }
 // If streamer DOES NOT exist in database
   // Check if streamer exists on Twitch
@@ -63,11 +75,14 @@ function getJSON($streamerName) {
       
       <p class="slogan">We are driven to help you get your Twitch partnership.</p>
       
-      <ul class="statistics">
+<!--       <ul class="statistics">
         <p class="statistics__intro">Did you know,</p>
         <li class="statistics__stat">You have about <span class="statistics__stat--highlight">5 minutes</span> to capture a new user's attention.</li>
         <li class="statistics__stat">Streamers usually see the most viewers around <span class="statistics__stat--highlight">3 hours</span> into the stream.</li>
-      </ul>
+      </ul> -->
+      
+<!--       <p class="statistics__stat">We have recorded <span class="statistics__stat--highlight">7689</span> streams.</p> -->
+      <p class="statistics__stat">Built by streamers, this web app lets growing streamers, like you, know when and why you are capturing your viewers' attention.</p>
       
       <p class="signup__intro">Give it a try!</p>
       
@@ -77,13 +92,7 @@ function getJSON($streamerName) {
       </form>
     </header>
     
-    <div>
-      <ul class="statistics">
-        <p class="statistics__intro">Did you know,</p>
-        <li class="statistics__stat">You have about <span class="statistics__stat--highlight">5 minutes</span> to capture a new user's attention.</li>
-        <li class="statistics__stat">Streamers usually see the most viewers around <span class="statistics__stat--highlight">3 hours</span> into the stream.</li>
-      </ul>
-    </div>
+<!--     <iframe src="https://www.twitch.tv/donthedeveloper/chat?popout=" frameborder="0" scrolling="no" height="500" width="350"></iframe> -->
   </body>
 </html>
 

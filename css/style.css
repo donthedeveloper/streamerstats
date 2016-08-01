@@ -11,8 +11,9 @@ body {
 
 header {
   background-color: #29303a;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   min-height: 100%;
+/*   background: url('http://www.siwallpaperhd.com/wp-content/uploads/2015/06/dark_gradient_wallpaper_hd_3_color.png'); */
 }
 
 .logo {
@@ -32,6 +33,7 @@ header {
   padding: 0;
   text-align: left;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .statistics__intro {
@@ -41,7 +43,7 @@ header {
 .statistics__stat {
   padding: 15px 0;
   font-size: 14px;
-  margin-left: 10px;
+/*   margin-left: 10px; */
 }
 
 .statistics__stat--highlight {
@@ -81,6 +83,311 @@ header {
   letter-spacing: .15rem;
   font-family: 'Lato', sans-serif;
 }
+
+
+
+/* STATISTICS PAGE */
+.columns_container {
+/*   font-size: 0; */
+}
+
+.column {
+  font-size: .75rem;
+  display: inline-block;
+  width: 45%;
+  height: 100px;
+}
+
+.column--left {
+  float: left;
+/*   padding-right: 5px; */
+}
+
+.column--right {
+  float: right;
+/*   padding-left: 5px; */
+}
+
+.column__number {
+  font-size: 42px;
+}
+
+.column__hr {
+  size: .5px;
+}
+
+
+/* .chart {
+  width: 100%;
+  background-color: rgba(255, 255, 255, .15);
+  position: relative;
+  padding-top: 20px;
+}
+
+.chart__caption {
+  font-size: 12px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 5px;
+} */
+
+.chart_container {
+  background-color: rgba(255, 255, 255, .15);
+  width: 100%;
+  padding: 8px 8px 28px;
+  margin: 0;
+}
+
+.chart {
+/*   margin: 0; */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chart_container__caption {
+  font-size: 12px;
+  text-align: left;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.chart__element {
+  display: inline-block;
+  width: 10%;
+  background-color: #fff;
+  margin: 0;
+  font-size: .5rem;
+  text-align: center;
+}
+.chart__element--highlight {
+  background-color: #83c500;
+}
+
+.date {
+  position: relative;
+  top: 20px;
+}
+
+.chart__element:after {
+  content: "";
+  display: inline-block;
+/*   width: 6%; */
+/*   background-color: #fff; */
+}
+
+.chart__element--one:after {
+  height: 40px;
+}
+.chart__element--two:after {
+  height: 54px;
+}
+.chart__element--three:after {
+  height: 62px;
+}
+.chart__element--four:after {
+  height: 56px;
+}
+.chart__element--five:after {
+  height: 66px;
+}
+.chart__element--six:after {
+  height: 74px;
+}
+.chart__element--seven:after {
+  height: 70px;
+}
+
+.streamer_header {
+  font-size: 24px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 12px 0;
+}
+
+/* .signup__intro--two {
+  margin: 35px 0;
+  font-size: 16px;
+  text-align: left;
+} */
+
+
+.clearfix::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* LANDING PAGE TEST */
+
+body {
+  color: #fff;
+  font-size: 1.25em;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #29303a;
+}
+
+header {
+  padding: 1rem 0;
+  min-height: 100%;
+/*   background: url('http://www.siwallpaperhd.com/wp-content/uploads/2015/06/dark_gradient_wallpaper_hd_3_color.png'); */
+}
+
+.logo-pre {
+/*   margin-top: 0; */
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 32px;
+}
+
+.intro-pre {
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.intro_date-pre {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.slogan-pre {
+/*   margin: 0 auto 40px; */
+  text-align: center;
+  font-size: 12px;
+}
+
+.signup-pre {
+/*   font-size: 0; */
+  background-image: url('../img/sample.png');
+  width: 100%;
+  max-width: 320px;
+  height: 250px;
+  margin: 2rem auto;
+  padding: 250px 0 0;
+  
+/*   position: relative; */
+/*   desktop version */
+  
+}
+
+.signup__fieldset-pre {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  
+  width: 450px;
+  
+  
+/*   padding: 105px 0; */
+  
+  
+/*   position: absolute; */
+/*   background-color: #606B7A; */
+  
+/*   test with desktop */
+  margin-left: -50px;
+  padding: 5%;
+  height: 75px;
+  border-radius: 10px;
+  font-size: 0;
+}
+
+.signup__intro-pre {
+  margin: 40px auto 26px;
+}
+
+.signup__input-pre {
+  padding: 10px;
+  border: 0;
+  font-size: 1rem;
+  text-align: center;
+  height: 100%;
+
+  width: 60%;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+  
+/*   test with desktop */
+  width: 100%;
+/*   font-size: 16px; */
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  
+/*   margin-left: -25px; */
+  
+
+}
+
+.signup__input--streamer-pre {
+  color: #666;
+  
+/*   desktop version */
+  width: 75%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.signup__input--submit-pre {
+  background-color: #78b400;
+  font-weight: bold;
+  color: #fff;
+  
+/*   letter-spacing: .15rem; */
+
+  
+/*   desktop version */
+  width: 25%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+/*   font-family: sans-serif; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

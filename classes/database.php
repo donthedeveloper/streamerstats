@@ -10,6 +10,7 @@ class Database {
   
   private $streamerData;
   
+  
   public function __construct($dbConfig) {
     $this->dbHost = $dbConfig['dbhost'];
     $this->dbName = $dbConfig['dbname'];
@@ -25,6 +26,7 @@ class Database {
       echo "error connecting";
     }
   }
+  
   
   public function streamerExistsInDB($streamerName) {
     try {
@@ -44,6 +46,27 @@ class Database {
     catch(Exception $exception) {
 //       echo $exception->getMessage();
       echo "Could not pull data";
+    }
+  }
+  
+  
+  public function streamerGetData($streamerName) {
+    try {
+      $results = $this->dbh->prepare("SELECT * FROM statistics WHERE streamer=? ORDER BY timestamp");
+      $results->bindValue(1, $streamerName, PDO::PARAM_STR);
+      $results->execute();
+      
+      if ($results->rowCount() > 0) {
+        // return data for manipulation
+        return $results;
+      }
+      else {
+        return false;
+      }
+    }
+    catch(Exception $exception) {
+//       echo $exception-getMessage();
+      echo "Could not verify whether streamer has data in database.";
     }
   }
   
