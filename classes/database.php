@@ -24,6 +24,7 @@ class Database {
     catch(Exception $exception) {
 //       echo $exception->getMessage();
       echo "error connecting";
+      die(); // CHANGE LATER
     }
   }
   
@@ -45,7 +46,35 @@ class Database {
     }
     catch(Exception $exception) {
 //       echo $exception->getMessage();
-      echo "Could not pull data";
+      return FALSE;
+    }
+  }
+  
+  
+  public function addEmailToDatabase($email) {
+    try {
+      $results = $this->dbh->prepare("INSERT INTO email (email) VALUES (?)");
+      $results->bindValue(1, $email, PDO::PARAM_STR);
+      $results->execute();
+      
+      return TRUE;
+    }
+    catch (Exception $exception) {
+      return FALSE;
+    }
+  }
+  
+  
+  public function addStreamerToDatabase($streamerName) {
+    try {
+      $results = $this->dbh->prepare("INSERT INTO streamers (name) VALUES (?)");
+      $results->bindValue(1, $streamerName, PDO::PARAM_STR);
+      $results->execute();
+      
+      return TRUE;
+    }
+    catch (Exception $exception) {
+      return FALSE;
     }
   }
   
@@ -58,10 +87,10 @@ class Database {
       
       if ($results->rowCount() > 0) {
         // return data for manipulation
-        return $results;
+        return TRUE;
       }
       else {
-        return false;
+        return FALSE;
       }
     }
     catch(Exception $exception) {

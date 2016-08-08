@@ -12,4 +12,6 @@ $dbConfig = array(
   "dbpass" => "i.J9vNc?)Jl0"
 );
 
+$twitchClientID = '996904fd6jhi3xd7a1q0gwm13px9mpk';
+
 ?>

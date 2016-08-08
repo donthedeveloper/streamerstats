@@ -8,7 +8,6 @@ img {
 }
 
 body {
-  color: #fff;
   font-size: 1.25rem;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -16,6 +15,7 @@ body {
 }
 
 header {
+  color: #fff;
   min-height: 100%;
   overflow: hidden;
 /*   background-image: url('../img/smartphone.png');
@@ -23,15 +23,19 @@ header {
   background-position: center bottom -200px; */
   background-color: #29303a;
 /*   position: relative; */
+  
+/*   min-height: 350px; */
 }
 
 .container {
   margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+
 /*   border: 1px solid red; */
   height: 50%;
   z-index: 2;
+  
+
+   
 }
 
 .container2 {
@@ -47,12 +51,10 @@ header {
 .logo {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  text-align: center;
+/*   text-align: center; */
   font-size: 3rem;
   text-align: left;
   margin-left: 3rem;
-/*   margin: .5rem auto 1.5rem; */
-/*   margin: 5% auto 15%rem; */
 }
 
 .intro {
@@ -74,10 +76,8 @@ header {
 .sample {
   width: 100%;
   max-width: 320px;
-/*   border: 1px solid white;
-  border-radius: 10px; */
+
   margin: 0 auto;
-/*   padding: 15px; */
 }
 
 
@@ -87,29 +87,8 @@ header {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-/*   background-image: url('../img/sample.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; */
-  
-/*   bottom: 0; */
-/*   border: 1px solid red; */
-/*   height: 193px; */
-/*   width: 86%; */
+
   height: auto;
-  
-/*   padding-top: 325px; */
-  
-  
-/*   margin: 3rem auto 0; */
-  
-/*   position: absolute;
-  bottom: 5%; */
-/*   left: 0; */
-  
-/*   -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
-  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25); */
 }
 
 .signup__fieldset {
@@ -119,12 +98,6 @@ header {
   padding: 0;
   margin: 0 auto;
   width: 100%;
-/*   position: absolute;
-  bottom: 0; */
-/*   left: 0; */
-
-/*   border-radius: 10px; */
-/*   font-size: 0; */
 }
 
 .signup__input {
@@ -134,22 +107,12 @@ header {
   border: 0;
   font-size: 1rem;
   text-align: center;
-/*   vertical-align: middle; */
-/*   width: 100%; */
-  
-/*     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
-  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25); */
 }
 
 .signup__input--streamer {
   width: 75%;
   
   color: #666;
-  
-  
-/*   border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
 }
 
 .signup__input--submit {
@@ -170,3 +133,168 @@ header {
 .statistics--highlight {
   color: #83c500;
 }
+
+.features_container {
+  font-size: 0;
+  height: 100%;
+  
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 10% 0;
+}
+
+.feature {  
+  font-size: 1.25rem;
+  
+/*   padding: 8% 5%; */
+  
+  display: inline-block;
+/*   line-height: 100%; */
+  vertical-align: middle;
+  width: 33.33333333%;
+  height: 50%;
+  
+/*   border: 1px solid black; */
+}
+
+.feature__paragraph {
+/*   display: inline; */
+/*   padding: 25px;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle; */
+  line-height: 1.8rem;
+  
+  padding: 1rem .5rem;
+  
+/*   padding: 3rem 1rem 1rem; */
+}
+
+footer {
+  position: relative;
+  min-height: 100%;
+  
+  background-color: #29303a;
+  color: #fff;
+}
+
+.footer__container {
+  height: 50%;
+  margin: auto;
+}
+
+.footer__logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+/*   text-align: center; */
+  font-size: 3rem;
+  text-align: center;
+/*   margin-left: 3rem; */
+}
+
+.footer__intro {
+  font-size: 3rem;
+  font-weight: 400;
+/*   margin: 1.5rem auto 0; */
+  margin: 2rem auto 0;
+}
+
+.footer__summary {
+  width: 50%;
+  margin: 3rem auto;
+  
+  line-height: 1.5rem;
+}
+
+.social_container {
+  background-color: #fff;
+  color: #000;
+  
+  position: absolute;
+  bottom: 3rem;
+  
+  width: 100%;
+}
+
+.social_slogan {
+  display: inline-block;
+  float: left;
+  
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+/*   text-align: center; */
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  line-height: 25px;
+  
+  margin: 1rem 0 1rem 3rem; /* left-margin same as top h1 logo */
+}
+
+.social_nav {
+  display: inline-block;
+  float: right;
+/*   line-height: 25px; */
+  
+  /* right-margin same as left margin of logos */
+/*   margin: 1rem 3rem 1rem 0; */
+  margin: 0 3rem 0 0;
+  padding: 0;
+}
+
+.social_nav__element {
+  display: inline-block;
+  padding: .5rem;
+/*   padding: 1rem; */
+}
+
+/* UTILITIES */
+
+.absolute_center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.icon {
+/*   background-image: url('http://http://image.flaticon.com/icons/svg/148/148824.svg'); */
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin: 1rem auto;
+  
+/*   opacity: .75; */
+}
+
+.social__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+/*   display: block; */
+  margin: 0;
+  
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
