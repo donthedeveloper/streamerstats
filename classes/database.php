@@ -9,6 +9,7 @@ class Database {
   private $dbh;
   
   private $streamerData;
+  private $emailData;
   
   
   public function __construct($dbConfig) {
@@ -38,7 +39,7 @@ class Database {
       $this->streamerData = $results;
       
       if ($results->rowCount() > 0) {
-        return true;
+        return TRUE;
       }
       else {
         return false;
@@ -48,6 +49,27 @@ class Database {
 //       echo $exception->getMessage();
       return FALSE;
     }
+  }
+  
+  
+  public function emailExistsInDB($email) {
+    try {
+      $results = $this->dbh->prepare("SELECT email FROM email WHERE email=?");
+      $results->bindValue(1, $email, PDO::PARAM_STR);
+      $results->execute();
+      
+      $this->emailData = $results;
+      
+      if ($results->rowCount() > 0) {
+        return TRUE;
+      }
+      else {
+        return FALSE;
+      }
+    }
+    catch (Exception $exception) {
+      return FALSE;
+    }    
   }
   
   

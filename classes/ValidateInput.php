@@ -39,4 +39,18 @@ class ValidateInput {
     
   }
   
+  
+  public function isAlphaNumeric($inputName) {
+    
+    $validatedInput = ctype_alnum($inputName);
+    
+    if ($validatedInput) {
+      return TRUE;
+    }
+    else {
+      return FALSE;
+    }
+    
+  }
+  
 }

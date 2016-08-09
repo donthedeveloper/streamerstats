@@ -12,6 +12,7 @@ $dbConfig = array(
   "dbpass" => "i.J9vNc?)Jl0"
 );
 
+$twitchApiUrl = 'https://api.twitch.tv/kraken/streams/';
 $twitchClientID = '996904fd6jhi3xd7a1q0gwm13px9mpk';
 
 ?>
