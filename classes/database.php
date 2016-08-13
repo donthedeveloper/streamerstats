@@ -9,7 +9,6 @@ class Database {
   private $dbh;
   
   private $streamerData;
-  private $emailData;
   
   
   public function __construct($dbConfig) {
@@ -30,7 +29,7 @@ class Database {
   }
   
   
-  public function streamerExistsInDB($streamerName) {
+  public function streamerDoesNotExistInDb($streamerName) {
     try {
       $results = $this->dbh->prepare("SELECT name FROM streamers WHERE name=?");
       $results->bindValue(1, $streamerName, PDO::PARAM_STR);
@@ -39,10 +38,10 @@ class Database {
       $this->streamerData = $results;
       
       if ($results->rowCount() > 0) {
-        return TRUE;
+        return FALSE;
       }
       else {
-        return false;
+        return TRUE;
       }
     }
     catch(Exception $exception) {
@@ -52,34 +51,32 @@ class Database {
   }
   
   
-  public function emailExistsInDB($email) {
-    try {
-      $results = $this->dbh->prepare("SELECT email FROM email WHERE email=?");
-      $results->bindValue(1, $email, PDO::PARAM_STR);
-      $results->execute();
-      
-      $this->emailData = $results;
-      
-      if ($results->rowCount() > 0) {
-        return TRUE;
-      }
-      else {
-        return FALSE;
-      }
-    }
-    catch (Exception $exception) {
-      return FALSE;
-    }    
-  }
-  
-  
-  public function addEmailToDatabase($email) {
+  public function addEmailToDatabase($email) { // TO-DO: USE SELECT STATEMENT TO VERIFY EMAIL WAS ADDED
     try {
       $results = $this->dbh->prepare("INSERT INTO email (email) VALUES (?)");
       $results->bindValue(1, $email, PDO::PARAM_STR);
       $results->execute();
       
       return TRUE;
+    }
+    catch (Exception $exception) {
+      return FALSE;
+    }
+  }
+  
+  
+  public function emailDoesNotExistInDB($email) {
+    try {
+      $results = $this->dbh->prepare("SELECT email FROM email WHERE email=?");
+      $results->bindValue(1, $email, PDO::PARAM_STR);
+      $results->execute();
+      
+      if ($results->rowCount() >0) {
+        return FALSE;
+      }
+      else {
+        return TRUE;
+      }
     }
     catch (Exception $exception) {
       return FALSE;

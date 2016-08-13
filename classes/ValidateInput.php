@@ -4,7 +4,7 @@ class ValidateInput {
 
   
   // returns array of passed(true) & failed(false) inputs
-  public function validateEmptyInput($inputArray, $requiredArray) {
+  public function emailIsNotEmpty($inputArray, $requiredArray) {
     
     $validatedInputArray = array();
     
@@ -25,32 +25,54 @@ class ValidateInput {
   }
 
   
-  public function validateEmail($inputName) {
+  public function emailIsValid($inputName) {
     
     $validatedEmail = filter_input(INPUT_POST, $inputName, FILTER_VALIDATE_EMAIL);
 
-    if ($validatedEmail === FALSE) {
-      return FALSE;
+    if ($validatedEmail) {
+      return TRUE;
     }
     else {
-      return TRUE;
+      return FALSE;
     }
     
     
   }
+
   
+  public function isAlphaNumeric($input) {
   
-  public function isAlphaNumeric($inputName) {
-    
-    $validatedInput = ctype_alnum($inputName);
-    
+    $validatedInput = ctype_alnum($input);
+
     if ($validatedInput) {
       return TRUE;
     }
     else {
       return FALSE;
     }
-    
+  
   }
   
 }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
