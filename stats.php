@@ -90,13 +90,13 @@ if ($_POST['submit_streamer']) {
   
   <body>
     <header>
-      <h1 class="header__logo">Streamer<span class="statistics_highlight">Stats</span></h1> 
+      <a class="logo" href="index.php"><h1 class="header__logo">Streamer<span class="statistics_highlight">Stats</span></h1></a>
       <div class="header__container absolute_center">
 
 <?php
         
 // BUILD CTA CONTENT
-$intro .= "<p class='success'>As an added bonus, did you know that you can <a class='statistics_highlight' href='stats.php'>enter your streamer name</a>? We will start gathering data from your stream immediately. The more data we gather from your stream, the more we can help you improve.</p>";
+$intro .= "<p class='success'>Enter your streamer name to have us start gathering data from your stream immediately. The more data we gather from your stream, the more we can help you improve.</p>";
         
 $errorMessage .= "<p class='error'>$error</p>";
         
@@ -132,12 +132,20 @@ if (!$success && !$duplicate) {
   $output .= $form;
 }
         
-echo $output;
+echo $successMessage;
         
 // END CTA CONTENT
 
 ?>
         
+      </div>
+      
+      <div class="social_cta">
+        <ul class="social_nav">
+          <li class="social_cta__element"><a href="http://www.twitter.com/streamerstatstv" target="_blank"><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145812.svg"></a></li>
+      <li class="social_cta__element"><a href="https://www.facebook.com/streamerstatstv/" target="_blank"><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145802.svg"></a></li>
+      <li class="social_cta__element"><a href="mailto:don@streamerstats.tv"><img class="social__icon" src="http://image.flaticon.com/icons/svg/9/9556.svg"></a></li>
+        </ul>
       </div>
       
       <div class="container2 up-to-tablet--hidden">

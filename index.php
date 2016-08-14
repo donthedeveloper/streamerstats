@@ -72,7 +72,7 @@ if ($_POST['submit_email']) {
   
   <body>
     <header>
-      <h1 class="header__logo">Streamer<span class="statistics_highlight">Stats</span></h1> 
+      <a class="logo" href="index.php"><h1 class="header__logo">Streamer<span class="statistics_highlight">Stats</span></h1></a>
       <div class="header__container absolute_center">
 
 <?php
@@ -140,13 +140,13 @@ echo $output;
     
     <footer>
       <div class="footer__container absolute_center">
-        <h1 class="footer__logo">Streamer<span class="statistics_highlight">Stats</span></h1>
+        <a class="logo" href="index.php"><h1 class="footer__logo">Streamer<span class="statistics_highlight">Stats</span></h1></a>
 
         <p class="footer__summary">We use your streaming data to build <i>personalized</i> strategies that help <i>you</i> grow <i>your</i> stream.</p>
 
         <form class="signup" action="#">
 <!--           <input class="signup__input signup__input--streamer" class="streamer_name" type="text" placeholder="Enter your email to be notified"> -->
-          <a class="signup__input signup__input--submit statistics_background" href="#">Notify Me</a>
+          <a class="signup__input signup__input--cta statistics_background" href="#">Notify Me</a>
         </form>
         
       </div>
@@ -154,9 +154,9 @@ echo $output;
       <div class="social_container clearfix">
         <p class="social_slogan up-to-tablet--hidden">Built By Streamers, For Streamers.</p>
         <ul class="social_nav">
-          <li class="social_nav__element"><i><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145812.svg"></i></li>
-          <li class="social_nav__element"><i><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145802.svg"></i></li>
-          <li class="social_nav__element"><i><img class="social__icon" src="http://image.flaticon.com/icons/svg/9/9556.svg"></i></li>
+          <li class="social_nav__element"><a href="http://www.twitter.com/streamerstatstv" target="_blank"><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145812.svg"></a></li>
+      <li class="social_nav__element"><a href="https://www.facebook.com/streamerstatstv/" target="_blank"><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145802.svg"></a></li>
+      <li class="social_nav__element"><a href="mailto:don@streamerstats.tv"><img class="social__icon" src="http://image.flaticon.com/icons/svg/9/9556.svg"></a></li>
         </ul>
       </div>
     </footer>
