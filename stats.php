@@ -102,6 +102,12 @@ $errorMessage .= "<p class='error'>$error</p>";
         
 $successMessage .= "<h2 class='header__intro'>Thank you!</h2>";   
 $successMessage .= "<h2 class='header__date'>Your streamer name has been added.</h2>";
+$successMessage .= "<div class='social_cta'>";
+$successMessage .= "<ul class='social_cta__nav'>";
+$successMessage .= "<li class='social_cta__element'><a rel='canonical' class='share share--twitter clearfix' href='https://twitter.com/intent/tweet?text=Hey%20there!%20Here%20is%20a%20new%20resource%20for%20Twitch%20streamers.%20http://streamerstats.tv' target='_blank'><img class='share' src='http://image.flaticon.com/icons/svg/145/145812.svg'><span class='share'>Tweet</span></a></li>";
+$successMessage .= "<li class='social_cta__element'><a class='share share--facebook clearfix' href='https://www.facebook.com/sharer/sharer.php?u=streamerstats.tv' target='_blank'><img class='share' src='http://image.flaticon.com/icons/svg/145/145802.svg'><span class='share'>Share</span></a></li>";
+$successMessage .= "</ul>";
+$successMessage .= "</div>";
 // $successMessage .= "<p class='success'>As an added bonus, did you know that you can <a class='statistics_highlight' href='stats.php'>enter your streamer name</a>? We will start gathering data from your stream immediately. The more data we gather from your stream, the more we can help you improve.</p>";
         
 $duplicateMessage .= "<p class='success'>We already have your streamer name. We've already started recording data from your live streams. Check back on launch day!</p>";       
@@ -132,20 +138,18 @@ if (!$success && !$duplicate) {
   $output .= $form;
 }
         
-echo $successMessage;
+echo $output;
         
 // END CTA CONTENT
 
 ?>
+<!--               <div class="social_cta">
+        <ul class="social_cta__nav">
+          <li class="social_cta__element"><a rel="canonical" class="share share--twitter clearfix" href="https://twitter.com/intent/tweet?text=Hey%20there!%20Here's%20a%20new%20resource%20for%20Twitch%20streamers.%20http://streamerstats.tv" target="_blank"><img class="share" src="http://image.flaticon.com/icons/svg/145/145812.svg"><span class="share">Tweet</span></a></li> -->
+<!--       <li class="social_cta__element"><a class="share share--facebook clearfix" href="https://www.facebook.com/sharer/sharer.php?u=streamerstats.tv" target="_blank"><img class="share" src="http://image.flaticon.com/icons/svg/145/145802.svg"><span class="share">Share</span></a></li> -->
+<!--         </ul>
+      </div> -->
         
-      </div>
-      
-      <div class="social_cta">
-        <ul class="social_nav">
-          <li class="social_cta__element"><a href="http://www.twitter.com/streamerstatstv" target="_blank"><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145812.svg"></a></li>
-      <li class="social_cta__element"><a href="https://www.facebook.com/streamerstatstv/" target="_blank"><img class="social__icon" src="http://image.flaticon.com/icons/svg/145/145802.svg"></a></li>
-      <li class="social_cta__element"><a href="mailto:don@streamerstats.tv"><img class="social__icon" src="http://image.flaticon.com/icons/svg/9/9556.svg"></a></li>
-        </ul>
       </div>
       
       <div class="container2 up-to-tablet--hidden">
