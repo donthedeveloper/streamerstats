@@ -4,7 +4,7 @@ class ValidateInput {
 
   
   // returns array of passed(true) & failed(false) inputs
-  public function inputIsNotEmpty($inputArray, $requiredArray) {
+  public function emailIsNotEmpty($inputArray, $requiredArray) {
     
     $validatedInputArray = array();
     

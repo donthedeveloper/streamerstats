@@ -15,7 +15,7 @@ $error = null;
 $success = null;
 $duplicate = null;
 
-if ($_POST['submit_streamer']) {
+if ($_POST['streamer']) {
   
   $requiredArray = array('streamer' => TRUE);
   $inputArray = array('streamer' => $_POST['streamer']);

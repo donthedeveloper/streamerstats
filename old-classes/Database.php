@@ -46,7 +46,7 @@ class Database {
     }
     catch(Exception $exception) {
 //       echo $exception->getMessage();
-      return FALSE; // redo this
+      return FALSE;
     }
   }
   
@@ -98,15 +98,14 @@ class Database {
   }
   
   
-  public function streamerHasDataInDb($streamerName) {
+  public function streamerGetData($streamerName) {
     try {
-      $results = $this->dbh->prepare("SELECT * FROM stats WHERE channel_name=? ORDER BY stream_id, db_entry_timestamp");
+      $results = $this->dbh->prepare("SELECT * FROM statistics WHERE streamer=? ORDER BY timestamp");
       $results->bindValue(1, $streamerName, PDO::PARAM_STR);
       $results->execute();
       
       if ($results->rowCount() > 0) {
-        $this->streamerData = $results;
-        
+        // return data for manipulation
         return TRUE;
       }
       else {
@@ -115,14 +114,8 @@ class Database {
     }
     catch(Exception $exception) {
 //       echo $exception-getMessage();
-      return FALSE;
+      echo "Could not verify whether streamer has data in database.";
     }
-  }
-  
-  
-  
-  public function getStreamerData() {
-    return $this->streamerData;
   }
   
   
