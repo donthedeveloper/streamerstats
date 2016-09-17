@@ -610,6 +610,39 @@ footer {
 
 
 
+/* STATISTICS */
+
+.streamer_header {
+  font-size: 24px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 12px 0;
+}
+
+.column {
+  font-size: .75rem;
+  display: inline-block;
+  width: 45%;
+  height: 100px;
+}
+
+.column--left {
+  float: left;
+/*   padding-right: 5px; */
+}
+
+.column--right {
+  float: right;
+/*   padding-left: 5px; */
+}
+
+.column__number {
+  font-size: 42px;
+}
+
+.column__hr {
+  size: .5px;
+}
 
 
 

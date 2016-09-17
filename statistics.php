@@ -32,7 +32,7 @@ if ( $db->streamerExistsInDb($streamerName) ) {
     
     $calculations->startCalculations($dataSortedByStream);
     
-//     print_r( $calculations->getRenderArray() );
+    print_r( $calculations->getRenderArray() );
     
   }
   else {

@@ -46,7 +46,7 @@ class Database {
     }
     catch(Exception $exception) {
 //       echo $exception->getMessage();
-      return FALSE; // redo this
+      return TRUE;
     }
   }
   
@@ -93,6 +93,7 @@ class Database {
       return TRUE;
     }
     catch (Exception $exception) {
+      echo $exception;
       return FALSE;
     }
   }

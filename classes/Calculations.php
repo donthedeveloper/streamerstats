@@ -75,6 +75,8 @@ class Calculations {
     foreach ($this->followersGainedPerStream as $stream => $followers) {
       $this->calculationsToRender['per_stream'][$stream]['followers_gained'] = $followers;
     }
+    
+    echo "<br />";
 //     print_r($this->calculationsToRender);
   }
   
@@ -129,10 +131,6 @@ class Calculations {
     $count = count( $this->dataSortedByStreamArray );
     $this->numberOfStreamsRecorded = $count;
 //     echo "Number of streams: $count<br />";
-  }
-  
-  public function getNumberOfStreamsRecorded() {
-    return $this->numberOfStreamsRecorded;
   }
   
   private function loopThroughStreams() {

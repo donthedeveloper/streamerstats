@@ -15,10 +15,10 @@ $error = null;
 $success = null;
 $duplicate = null;
 
-if ($_POST['streamer']) {
+if ($_GET['submit_streamer']) {
   
   $requiredArray = array('streamer' => TRUE);
-  $inputArray = array('streamer' => $_POST['streamer']);
+  $inputArray = array('streamer' => $_GET['streamer']);
   
   // RUN VALIDATION METHODS //
   
@@ -112,12 +112,12 @@ $successMessage .= "</div>";
         
 $duplicateMessage .= "<p class='success'>We already have your streamer name. We've already started recording data from your live streams. Check back on launch day!</p>";       
         
-$form .= "<form class='signup' method='post' action=''>";
+$form .= "<form class='signup' method='get' action=''>";
 $form .= "<input class='signup__input signup__input--streamer' name='streamer' type='text' placeholder='Enter your streamer name'>";
-$form .= "<input class='signup__input signup__input--submit statistics_background' name='submit_streamer' type='submit' value='OK'>";
+$form .= "<input class='signup__input signup__input--submit statistics_background' type='submit' value='OK'>";
 $form .= "</form>";
         
-if (!$_POST['submit_streamer']) {
+if (!$_GET['streamer']) {
   $output .= $intro;
 }
 else {

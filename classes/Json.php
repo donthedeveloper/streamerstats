@@ -18,7 +18,7 @@ class Json {
     
     // set parameters
     curl_setopt($curl, CURLOPT_URL, $url . $streamer);
-    curl_setopt($curl, CURLOPT_HEADER, 'Client-ID: ' . $id);
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array('Client-ID: ' . $id));
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
     
     // grab url and pass it to the browser
