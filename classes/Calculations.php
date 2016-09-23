@@ -76,7 +76,6 @@ class Calculations {
       $this->calculationsToRender['per_stream'][$stream]['followers_gained'] = $followers;
     }
     
-    echo "<br />";
 //     print_r($this->calculationsToRender);
   }
   

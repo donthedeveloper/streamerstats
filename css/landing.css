@@ -31,6 +31,9 @@ header {
   height: 168px;
   padding: 0 1.1rem;
   
+/*   max-width: 500px;
+  margin: 0 auto; */
+  
   z-index: 2;
 
 }
@@ -645,8 +648,68 @@ footer {
 }
 
 
+.clearfix::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+body {
+/*   max-width: 500px;
+  margin: 0 auto; */
+}
 
 
+.chart__navigation {
+  list-style-type: none;
+/*   border: 1px solid white; */
+  font-size: 0;
+  padding-left: 0;
+}
 
+.chart__navigation li {
+  display: inline-block;
+  width: 33.33333333333333333333%;
+  
+/*   padding: .5rem 1rem; */
+  font-size: 12px;
+  
+/*   border: 1px solid white; */
+}
 
+.chart__navigation button {
+  padding: .5rem 1rem;
+  border: 1px solid white;
+  background-color: inherit;
+  width: 100%;
+}
 
+.chart__navigation .selected {
+  background-color: white;
+  color: black;
+}
+
+.chart {
+/*   width: 400px; */
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .chart {
+    height: 400px;
+  }
+}
+
+.statistics__container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
